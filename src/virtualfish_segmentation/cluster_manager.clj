@@ -101,14 +101,14 @@
   [argmap]
   (let [lein-location "/home/harringt/bin/lein"
         script-name (str "VirtualFish_" (System/nanoTime) ".slurm")
-        code-directory "/projects/VirtualFish/kyle/timeseries_segmentation/zebrafish-vasculature"
+        code-directory "/projects/VirtualFish/kyle/timeseries_segmentation/virtualfish-segmentation"
         args (string/join " "
                           (map #(str %)
                               (interleave (keys argmap)
                                           (vals argmap))))
-        dataset-command (str lein-location " run -m zebrafish-vasculature.rbc-dataset " args)
-        train-command (str lein-location " run -m zebrafish-vasculature.train-segmentation " args)
-        segment-command (str lein-location " run -m zebrafish-vasculature.segment-image " args)
+        dataset-command (str lein-location " run -m virtualfish-segmentation.rbc-dataset " args)
+        train-command (str lein-location " run -m virtualfish-segmentation.train-segmentation " args)
+        segment-command (str lein-location " run -m virtualfish-segmentation.segment-image " args)
         slurm-script
         (with-out-str (println "#!/bin/sh")
                       (println "#SBATCH -o \"/projects/VirtualFish/slurm_output/VirtualFish_%x_%J_%a.out\"")
