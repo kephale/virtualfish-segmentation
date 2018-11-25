@@ -8,6 +8,8 @@ Stephan Daetwyler, Carl Modes, Kyle Harrington*, Jan Huisken*
 *Co-corresponding authors
 ```
 
+https://www.biorxiv.org/content/early/2018/11/24/478149
+
 Contains code that is used to perform segmentations of zebrafish vasculature.
 
 The code is customized for the MPI-CBG cluster, which as of this time, uses slurm as the job scheduler. Some paths and cluster-specific parameters are customized to the project but can be adjusted in the source code.
